@@ -1,0 +1,23 @@
+name: 'Get kanbanize board tasks'
+description: 'Get all board tasks or tasks by column'
+author: 'Renan Diniz'
+inputs:
+  board:
+    description: 'id do board'
+    required: true
+    default: '0'
+  column:
+    description: 'column name'
+    required: false
+  subdomain:
+    description: 'kabanize subdomain'
+    required: true
+  apikey:
+    description: 'api key'
+    required: true
+outputs:
+  tasks-title:
+    description: 'The title of tasks'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
